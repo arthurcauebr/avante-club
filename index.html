@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="description" content="Avante Club — experiência, suporte e relacionamento Avante Mobi.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="stylesheet" href="styles.css">
+<title>Avante Club</title>
+</head>
+<body>
+<header class="topbar">
+  <img src="assets/logo-avante.svg" alt="Avante Mobi" class="logo">
+  <span class="club">AVANTE CLUB</span>
+</header>
+<main class="container">
+<section class="hero">
+  <div>
+    <p class="eyebrow">AVANTE MOBI</p>
+    <h1>Sua mobilidade continua com você depois da compra.</h1>
+    <p class="lead">Cuidados, garantia, atendimento, revisões, catálogo e indicações em um só lugar.</p>
+    <div class="actions">
+      <a class="btn primary" href="#servicos">Acessar serviços</a>
+      <button class="btn outline" id="installBtn" hidden>Adicionar à tela inicial</button>
+    </div>
+  </div>
+</section>
+<section id="servicos" class="quick-grid">
+  <a class="quick" href="#minha-moto"><strong>Minha Moto</strong><span>Cadastre seu veículo</span></a>
+  <a class="quick" href="#manual"><strong>Manual & Cuidados</strong><span>Uso e conservação</span></a>
+  <a class="quick" href="#garantia"><strong>Garantia</strong><span>1 ano bateria e motor</span></a>
+  <a class="quick" href="#atendimento"><strong>Atendimento</strong><span>Abra uma solicitação</span></a>
+  <a class="quick" href="#revisao"><strong>Revisões</strong><span>Solicite agendamento</span></a>
+  <a class="quick" href="#indique"><strong>Avante Indica</strong><span>R$100 por venda</span></a>
+  <a class="quick" href="#catalogo"><strong>Catálogo</strong><span>V7 Pró, X13 e X15</span></a>
+  <a class="quick" href="#loja"><strong>Loja Física</strong><span>Maresias</span></a>
+</section>
+<section id="minha-moto" class="section panel">
+  <div class="section-title"><p class="eyebrow">PERFIL DO CLIENTE</p><h2>Minha Moto</h2></div>
+  <p class="muted">Salve os dados principais neste aparelho para consultar rapidamente quando precisar de suporte.</p>
+  <form id="vehicleForm" class="form-grid">
+    <label>Seu nome<input id="ownerName" required placeholder="Nome completo"></label>
+    <label>WhatsApp<input id="ownerPhone" placeholder="(12) 99999-9999"></label>
+    <label>Modelo<select id="vehicleModel"><option>V7 Pró</option><option>X13</option><option>X15</option></select></label>
+    <label>Data da compra<input id="purchaseDate" type="date"></label>
+    <label>Identificação / chassi<input id="vehicleId" placeholder="Opcional"></label>
+    <label>Observações<input id="vehicleNotes" placeholder="Cor, acessórios etc."></label>
+    <div class="full actions"><button class="btn primary" type="submit">Salvar Minha Moto</button><button class="btn light" type="button" id="clearVehicle">Limpar</button></div>
+  </form>
+  <div id="vehicleSaved" class="saved" hidden></div>
+</section>
+<section id="manual" class="section">
+  <div class="section-title"><p class="eyebrow">CONTEÚDO ÚTIL</p><h2>Manual & Cuidados</h2></div>
+  <div class="accordion">
+    <details open><summary>Carregamento</summary><p>Use apenas carregador compatível com o veículo. Faça a recarga em local seco e ventilado e evite exposição à chuva durante o carregamento.</p></details>
+    <details><summary>Bateria</summary><p>Evite deixar o veículo armazenado por longos períodos com a bateria totalmente descarregada. Se ficar parado, faça recargas periódicas.</p></details>
+    <details><summary>Autonomia</summary><p>A autonomia varia conforme peso transportado, relevo, velocidade, pressão dos pneus, vento e forma de condução.</p></details>
+    <details><summary>Pneus e freios</summary><p>Verifique calibragem, desgaste e resposta dos freios com frequência. Ruído, folga ou perda de eficiência merecem avaliação.</p></details>
+    <details><summary>Lavagem e chuva</summary><p>Evite jatos de alta pressão diretamente sobre componentes elétricos, conectores e painel. Após contato intenso com água, seque e observe o funcionamento.</p></details>
+  </div>
+</section>
+<section id="garantia" class="section panel accent">
+  <div class="section-title"><p class="eyebrow">PÓS-VENDA</p><h2>Garantia</h2></div>
+  <p class="big"><strong>1 ano de garantia para bateria e motor.</strong></p>
+  <p class="muted">Em caso de problema, entre em contato com a Avante antes de realizar intervenção técnica no veículo.</p>
+  <a class="btn primary wa" data-msg="Olá! Preciso de atendimento sobre a garantia da minha Avante.">Solicitar atendimento de garantia</a>
+</section>
+<section id="atendimento" class="section">
+  <div class="section-title"><p class="eyebrow">SUPORTE</p><h2>Abrir atendimento</h2></div>
+  <form id="supportForm" class="form-grid card-form">
+    <label>Nome<input id="supportName" required></label>
+    <label>Modelo<select id="supportModel"><option>V7 Pró</option><option>X13</option><option>X15</option></select></label>
+    <label class="full">O que aconteceu?<textarea id="supportIssue" required placeholder="Descreva o problema ou dúvida"></textarea></label>
+    <label>Preferência de contato<select id="supportContact"><option>WhatsApp</option><option>Ligação</option></select></label>
+    <div class="full"><button class="btn primary" type="submit">Enviar pelo WhatsApp</button></div>
+  </form>
+</section>
+<section id="revisao" class="section panel">
+  <div class="section-title"><p class="eyebrow">MANUTENÇÃO</p><h2>Solicitar revisão</h2></div>
+  <form id="reviewForm" class="form-grid">
+    <label>Nome<input id="reviewName" required></label>
+    <label>Modelo<select id="reviewModel"><option>V7 Pró</option><option>X13</option><option>X15</option></select></label>
+    <label>Quilometragem aproximada<input id="reviewKm" type="number" min="0" placeholder="km"></label>
+    <label>Melhor período<select id="reviewPeriod"><option>Manhã</option><option>Tarde</option></select></label>
+    <label class="full">Observação<textarea id="reviewNotes" placeholder="Algo que gostaria que fosse verificado?"></textarea></label>
+    <div class="full"><button class="btn primary" type="submit">Solicitar pelo WhatsApp</button></div>
+  </form>
+</section>
+<section id="indique" class="section referral">
+  <div><p class="eyebrow cyan">AVANTE INDICA</p><h2>Indique. A Avante vende. Você recebe.</h2><p>Receba <strong>R$100</strong> por indicação que resultar em uma venda confirmada.</p></div>
+  <form id="referralForm" class="form-grid dark-form">
+    <label>Seu nome<input id="referrerName" required></label>
+    <label>Seu WhatsApp<input id="referrerPhone" required></label>
+    <label>Nome do indicado<input id="leadName" required></label>
+    <label>WhatsApp do indicado<input id="leadPhone" required></label>
+    <label>Modelo de interesse<select id="leadModel"><option>Não sei</option><option>V7 Pró</option><option>X13</option><option>X15</option></select></label>
+    <div class="full"><button class="btn primary" type="submit">Enviar indicação</button></div>
+  </form>
+</section>
+<section id="catalogo" class="section">
+  <div class="section-title"><p class="eyebrow">CATÁLOGO INICIAL</p><h2>Conheça os modelos</h2></div>
+  <div class="products">
+    <article><span>V7 PRÓ</span><h3>V7 Pró</h3><p>Mobilidade elétrica urbana para o dia a dia.</p><a class="text-link wa" data-msg="Olá! Quero conhecer a V7 Pró.">Falar com a Avante →</a></article>
+    <article><span>X13</span><h3>X13</h3><p>Motor de 1000W e proposta urbana para conforto e praticidade.</p><a class="text-link wa" data-msg="Olá! Quero conhecer a X13.">Falar com a Avante →</a></article>
+    <article><span>X15</span><h3>X15</h3><p>Motor de 1000W e proposta de maior autonomia dentro da linha atual.</p><a class="text-link wa" data-msg="Olá! Quero conhecer a X15.">Falar com a Avante →</a></article>
+  </div>
+</section>
+<section id="loja" class="section panel">
+  <div class="section-title"><p class="eyebrow">MARESIAS</p><h2>Loja Avante Mobi</h2></div>
+  <p><strong>Av. Francisco Loup, 208, Maresias</strong></p>
+  <p>Horário: 9:00 às 18:00</p>
+  <p>Instagram: <a href="https://instagram.com/avantemobi" target="_blank" rel="noopener">@avantemobi</a></p>
+  <div class="actions">
+    <a class="btn primary wa" data-msg="Olá! Quero falar com a loja Avante Mobi em Maresias.">WhatsApp</a>
+    <a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Av.%20Francisco%20Loup%2C%20208%2C%20Maresias" target="_blank" rel="noopener">Abrir no mapa</a>
+  </div>
+</section>
+<section class="section note"><strong>MVP v0.2:</strong> os dados de “Minha Moto” ficam salvos somente neste aparelho. Solicitações de atendimento, revisão e indicação são enviadas pelo WhatsApp para a Avante.</section>
+</main>
+<footer><img src="assets/logo-avante.svg" alt="Avante Mobi"><p>Avante Club · MVP v0.2</p></footer>
+<script src="app.js"></script>
+</body></html>
