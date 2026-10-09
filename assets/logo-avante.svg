@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-label="Avante Mobi"><rect width="900" height="260" rx="24" fill="#0A0A0A"/><g transform="translate(36 28)"><path d="M85 25a72 72 0 1 1-39 130" fill="none" stroke="#0066FF" stroke-width="14" stroke-linecap="round"/><path d="M38 151c45-73 96-79 144-57-40 2-72 23-103 63 15-44 45-72 89-79" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M167 63l22-31-5 24 18-7-26 36 5-25z" fill="#FF5A00"/></g><text x="250" y="118" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="700" letter-spacing="3">AVANTE</text><text x="610" y="118" fill="#0066FF" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="700" letter-spacing="3">MOBI</text><text x="252" y="165" fill="#FFFFFF" opacity=".82" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="8">MOBILIDADE ELÉTRICA URBANA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" role="img" aria-label="Avante Mobi">
+<g transform="translate(24 20)">
+  <path d="M145 28 A108 108 0 0 1 242 98" fill="none" stroke="#1268F3" stroke-width="16" stroke-linecap="round"/>
+  <path d="M242 141 A108 108 0 0 1 87 230" fill="none" stroke="#1268F3" stroke-width="16" stroke-linecap="round"/>
+  <path d="M78 202 C118 128 170 102 232 113 C178 119 135 151 104 211 C123 161 156 126 205 105" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M216 88 L246 45 L238 77 L263 67 L228 115 L235 82 Z" fill="#FF5A00"/>
+</g>
+<text x="305" y="150" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="700" letter-spacing="5">AVANTE</text>
+<text x="692" y="150" fill="#1268F3" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="700" letter-spacing="4">MOBI</text>
+<text x="311" y="205" fill="#FFFFFF" opacity=".82" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" letter-spacing="10">MOBILIDADE ELÉTRICA URBANA</text>
+</svg>
