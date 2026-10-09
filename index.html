@@ -7,14 +7,14 @@
 <meta name="description" content="Avante Club — suporte, cuidados, garantia e benefícios Avante Mobi.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon.svg">
-<link rel="stylesheet" href="styles.css?v=035">
+<link rel="stylesheet" href="styles.css?v=040">
 <title>Avante Club</title>
 </head>
 <body>
 <header class="topbar" id="inicio">
   <div class="topbar-inner">
     <a href="#inicio" class="brand" aria-label="Avante Mobi">
-      <img src="assets/logo-avante-oficial.png?v=035" alt="Avante Mobi" class="logo">
+      <img src="assets/logo-avante-oficial.png?v=040" alt="Avante Mobi" class="logo">
     </a>
     <span class="club-pill">AVANTE CLUB</span>
   </div>
@@ -24,7 +24,7 @@
   <section class="hero">
     <div class="hero-copy">
       <div class="hero-kicker"><span></span> EXPERIÊNCIA AVANTE</div>
-      <h1>Sua Avante continua com você depois da compra.</h1>
+      <h1>Sua Avante <span class="hero-blue">continua com você</span> depois da compra.</h1>
       <p class="hero-text">Suporte, cuidados, garantia, revisões, benefícios e relacionamento em um só lugar.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#servicos">Acessar serviços</a>
@@ -37,9 +37,14 @@
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
-      <div class="orb orb-one"></div><div class="orb orb-two"></div>
-      <div class="hero-logo-card"><img src="assets/logo-avante-oficial.png?v=035" alt=""></div>
-      <div class="hero-badge">MOBILIDADE<br><b>ELÉTRICA</b></div>
+      <div class="mobility-glow"></div>
+      <div class="mobility-ring ring-a"></div>
+      <div class="mobility-ring ring-b"></div>
+      <div class="mobility-streak streak-a"></div>
+      <div class="mobility-streak streak-b"></div>
+      <div class="mobility-bolt"></div>
+      <div class="mobility-caption"><span>AVANTE</span><b>MOBILIDADE ELÉTRICA URBANA</b></div>
+      <div class="hero-badge">MARESIAS · LITORAL NORTE<br><b>MOBILIDADE ELÉTRICA</b></div>
     </div>
   </section>
 
@@ -50,12 +55,12 @@
     <div class="service-grid">
       <a class="service-card" href="#minha-moto"><div class="service-icon">◈</div><div><strong>Minha Moto</strong><span>Cadastre seu veículo</span></div><b>→</b></a>
       <a class="service-card" href="#manual"><div class="service-icon">≡</div><div><strong>Manual & Cuidados</strong><span>Uso e conservação</span></div><b>→</b></a>
-      <a class="service-card" href="#garantia"><div class="service-icon">✓</div><div><strong>Garantia</strong><span>1 ano bateria e motor</span></div><b>→</b></a>
+      <a class="service-card service-dark" href="#garantia"><div class="service-icon">✓</div><div><strong>Garantia</strong><span>1 ano bateria e motor</span></div><b>→</b></a>
       <a class="service-card" href="#atendimento"><div class="service-icon">◌</div><div><strong>Atendimento</strong><span>Abra uma solicitação</span></div><b>→</b></a>
       <a class="service-card" href="#revisao"><div class="service-icon">⌁</div><div><strong>Revisões</strong><span>Agende seu atendimento</span></div><b>→</b></a>
-      <a class="service-card featured" href="#indique"><div class="service-icon">R$</div><div><strong>Avante Indica</strong><span>Ganhe R$100 por venda</span></div><b>→</b></a>
+      <a class="service-card service-dark service-indica" href="#indique"><div class="service-icon">R$</div><div><strong>Avante Indica</strong><span>Ganhe R$100 por venda</span></div><b>→</b></a>
       <a class="service-card" href="#catalogo"><div class="service-icon">▦</div><div><strong>Catálogo</strong><span>Conheça nossos modelos</span></div><b>→</b></a>
-      <a class="service-card" href="#loja"><div class="service-icon">⌂</div><div><strong>Loja Física</strong><span>Maresias</span></div><b>→</b></a>
+      <a class="service-card service-dark" href="#loja"><div class="service-icon">⌂</div><div><strong>Loja Física</strong><span>Maresias</span></div><b>→</b></a>
     </div>
   </section>
 
@@ -63,7 +68,7 @@
     <div class="section-intro">
       <p class="eyebrow">PERFIL DO CLIENTE</p>
       <h2>Minha Moto</h2>
-      <p>Tenha os principais dados do seu veículo sempre à mão para tornar qualquer atendimento mais rápido.</p>
+      <p>Sua área pessoal da Avante: dados do veículo, garantia e atalhos de pós-venda em um só lugar.</p>
       <div class="mini-feature"><span>✓</span><div><strong>Dados salvos neste aparelho</strong><small>Privacidade e acesso rápido no MVP.</small></div></div>
     </div>
     <div class="app-card">
@@ -80,11 +85,29 @@
         <label>Observações<input id="vehicleNotes" placeholder="Cor, acessórios etc."></label>
         <div class="full form-actions"><button class="btn btn-primary" type="submit">Salvar minha moto</button><button class="btn btn-light" type="button" id="clearVehicle">Limpar</button></div>
       </form>
-      <div id="vehicleSaved" class="saved-card" hidden></div>
+      <div id="vehicleSaved" class="vehicle-profile" hidden>
+        <div class="vehicle-art"><span id="vehicleArtModel">V7</span><small>AVANTE MOBI</small></div>
+        <div class="vehicle-profile-body">
+          <div class="vehicle-profile-head">
+            <div><small>MINHA AVANTE</small><h3 id="vehicleProfileModel">V7 Pró</h3></div>
+            <span class="warranty-active">GARANTIA ATIVA</span>
+          </div>
+          <div class="vehicle-facts">
+            <div><small>Cliente</small><strong id="vehicleProfileOwner">—</strong></div>
+            <div><small>Compra</small><strong id="vehicleProfileDate">—</strong></div>
+            <div><small>Identificação</small><strong id="vehicleProfileId">—</strong></div>
+          </div>
+          <div class="vehicle-shortcuts">
+            <a href="#revisao" class="btn btn-light">Revisão</a>
+            <a href="#atendimento" class="btn btn-light">Atendimento</a>
+            <a class="btn btn-primary wa" data-msg="Olá! Sou cliente Avante e preciso de suporte com a minha moto.">WhatsApp</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="manual" class="section">
+  <section id="manual" class="section manual-section">
     <div class="section-head">
       <div><p class="eyebrow">CONTEÚDO ÚTIL</p><h2>Manual & Cuidados</h2><p>Orientações simples para preservar seu veículo e sua bateria.</p></div>
     </div>
@@ -100,15 +123,15 @@
 
   <section id="garantia" class="section warranty-card">
     <div class="warranty-icon">✓</div>
-    <div class="warranty-copy"><p class="eyebrow">PÓS-VENDA AVANTE</p><h2>1 ano de garantia</h2><p>Garantia para <strong>bateria e motor</strong>. Em caso de problema, fale com a Avante antes de qualquer intervenção técnica.</p></div>
+    <div class="warranty-copy"><p class="eyebrow">PÓS-VENDA AVANTE</p><h2><span class="bolt-accent"></span>1 ano de garantia</h2><p>Garantia para <strong>bateria e motor</strong>. Em caso de problema, fale com a Avante antes de qualquer intervenção técnica.</p></div>
     <a class="btn btn-primary wa" data-msg="Olá! Preciso de atendimento sobre a garantia da minha Avante.">Solicitar atendimento</a>
   </section>
 
   <section id="atendimento" class="section two-panel">
     <div class="dark-panel">
       <p class="eyebrow cyan">SUPORTE LOCAL</p>
-      <h2>Precisou?<br>Fale com a Avante.</h2>
-      <p>Descreva o que aconteceu e envie as informações direto para nosso WhatsApp.</p>
+      <h2>Precisa de ajuda?<br>Fale com a Avante.</h2>
+      <p>Nossa equipe está pronta para orientar você sobre uso, suporte, manutenção e garantia.</p>
       <div class="support-points"><span>Resposta humana</span><span>Histórico do atendimento</span><span>Orientação local</span></div>
     </div>
     <form id="supportForm" class="form-panel">
@@ -137,10 +160,10 @@
 
   <section id="indique" class="section referral">
     <div class="referral-copy">
-      <div class="referral-value">R$100</div>
+      <div class="referral-value"><em>⚡</em> R$100</div>
       <p class="eyebrow cyan">AVANTE INDICA</p>
       <h2>Indique. A Avante vende. Você recebe.</h2>
-      <p>Transforme uma boa indicação em recompensa.</p>
+      <p>Receba <strong>R$100 por indicação</strong> que resultar em uma venda confirmada.</p>
       <div class="steps">
         <div><b>1</b><span>Você indica</span></div><div><b>2</b><span>A Avante atende</span></div><div><b>3</b><span>Venda concluída = R$100</span></div>
       </div>
@@ -162,15 +185,15 @@
     <div class="product-grid">
       <article class="product-card">
         <div class="product-visual pv1"><span>V7</span><div class="wheel w1"></div><div class="wheel w2"></div><div class="bike-line"></div></div>
-        <div class="product-info"><div class="product-meta"><span>V7 PRÓ</span><b>URBANA</b></div><h3>V7 Pró</h3><p>Mobilidade prática e versátil para o dia a dia.</p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a V7 Pró.">Quero conhecer</a></div>
+        <div class="product-info"><div class="product-meta"><span>V7 PRÓ</span><b>URBANA</b></div><h3>V7 Pró</h3><p>Mobilidade prática e versátil para o dia a dia.<br><strong>Até 50 km de autonomia</strong></p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a V7 Pró.">Quero conhecer</a></div>
       </article>
       <article class="product-card">
         <div class="product-visual pv2"><span>X13</span><div class="wheel w1"></div><div class="wheel w2"></div><div class="bike-line"></div></div>
-        <div class="product-info"><div class="product-meta"><span>X13</span><b>1000W</b></div><h3>X13</h3><p>Conforto, presença e praticidade para a rotina urbana.</p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a X13.">Quero conhecer</a></div>
+        <div class="product-info"><div class="product-meta"><span>X13</span><b>1000W</b></div><h3>X13</h3><p>Conforto, presença e praticidade para a rotina urbana.<br><strong>Até 60 km de autonomia</strong></p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a X13.">Quero conhecer</a></div>
       </article>
       <article class="product-card">
         <div class="product-visual pv3"><span>X15</span><div class="wheel w1"></div><div class="wheel w2"></div><div class="bike-line"></div></div>
-        <div class="product-info"><div class="product-meta"><span>X15</span><b>1000W</b></div><h3>X15</h3><p>Mais autonomia e conforto para quem roda mais.</p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a X15.">Quero conhecer</a></div>
+        <div class="product-info"><div class="product-meta"><span>X15</span><b>1000W</b></div><h3>X15</h3><p>Mais autonomia e conforto para quem roda mais.<br><strong>Até 70 km de autonomia</strong></p><a class="btn btn-dark wa" data-msg="Olá! Quero conhecer a X15.">Quero conhecer</a></div>
       </article>
     </div>
   </section>
@@ -178,11 +201,11 @@
   <section id="loja" class="section store-card">
     <div class="store-copy">
       <p class="eyebrow">LOJA FÍSICA</p>
-      <h2>Avante Mobi<br><span>Maresias</span></h2>
-      <div class="store-details"><p><b>Av. Francisco Loup, 208</b><br>Maresias — São Sebastião/SP</p><p><b>9:00 às 18:00</b><br>Atendimento presencial</p><p><b>@avantemobi</b><br>Instagram oficial</p></div>
+      <h2>Conheça a Avante Mobi<br><span>em Maresias</span></h2>
+      <div class="store-details"><p><b>Av. Francisco Loup, 208</b><br>Maresias — São Sebastião/SP</p><p><b>9:00 às 18:00</b><br>Atendimento presencial e suporte local</p><p><b>@avantemobi</b><br>Instagram oficial</p></div>
       <div class="hero-actions">
         <a class="btn btn-primary wa" data-msg="Olá! Quero falar com a loja Avante Mobi em Maresias.">WhatsApp</a>
-        <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Av.%20Francisco%20Loup%2C%20208%2C%20Maresias" target="_blank" rel="noopener">Abrir no mapa</a>
+        <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Av.%20Francisco%20Loup%2C%20208%2C%20Maresias" target="_blank" rel="noopener">Como chegar</a>
       </div>
     </div>
     <div class="map-art"><div class="pin">●</div><span>MARESIAS</span><small>Av. Francisco Loup, 208</small></div>
@@ -199,11 +222,11 @@
 
 <footer>
   <div class="footer-inner">
-    <img src="assets/logo-avante-oficial.png?v=035" alt="Avante Mobi">
+    <img src="assets/logo-avante-oficial.png?v=040" alt="Avante Mobi">
     <div class="footer-links"><a class="wa" data-msg="Olá! Quero falar com a Avante Mobi.">WhatsApp</a><a href="https://instagram.com/avantemobi" target="_blank">@avantemobi</a><a href="#loja">Maresias</a></div>
-    <small>Avante Club · v0.3.5</small>
+    <small>Mobilidade Elétrica Urbana · Avante Club v0.4.0</small>
   </div>
 </footer>
-<script src="app.js?v=035"></script>
+<script src="app.js?v=040"></script>
 </body>
 </html>
